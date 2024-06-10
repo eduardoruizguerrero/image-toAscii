@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: whitesmoke;
+}
+Header{
+    text-align: center;
+    font-weight: 600;
+    font-family: Inter, 'sans-serif';
+}
+Header > span > h1{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-family: Inter,'sans-serif';
+    font-weight: 700;
+}
+/*
+*   Container
+*/
+.container, .canvasPre, .divSubirFoto{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+/*
+*   Canvas and Pre.
+*/
+.canvasPre{
+    display: grid;
+    justify-content: center;
+}
+pre{
+    cursor: pointer;
+    filter: drop-shadow(0em 0em 4em rgba(0, 0, 0, 0.100));
+    background-color: white;
+    color: rgb(0, 0, 0);;
+}
+.buttonCopiar{
+    width: 5.5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: black;
+    color: white;
+    font-family: Inter,'sans-serif';
+    font-weight: 800;
+    cursor: pointer;
+    filter: drop-shadow(0em 0em 4em rgba(0, 0, 0, 0.100));
+}
+/*
+*   Submit File, Github and Information for page.
+*/
+.contactAndInformation{
+    margin-bottom: 2em;
+    display: grid;
+    justify-content: center;
+}
+.subirFoto{
+    font-weight: 600;
+    font-family: Inter, 'sans-serif';
+}
+.divSpanInformation{
+    margin-top: 2em;
+}
+.spanInformation{
+    font-family: Inter,'sans-serif';
+    font-weight: 700;
+}
+.spanGithub{
+    text-align: left;
+    font-family: Inter,'sans-serif';
+    font-weight: 700;
+    text-decoration: none;
+    color: pink;
+}

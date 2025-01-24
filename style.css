@@ -1,77 +1,103 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-body{
+*::selection {
+    background-color: rgb(207, 232, 255);
+}
+
+body {
     background-color: whitesmoke;
 }
-Header{
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, p, a {
+    font-family: Inter, 'sans-serif';
+}
+h1 {
     text-align: center;
+    margin: 1rem;
+}
+p, a {
     font-weight: 600;
-    font-family: Inter, 'sans-serif';
 }
-Header > span > h1{
-    padding-top: 2em;
-    padding-bottom: 2em;
-    font-family: Inter,'sans-serif';
-    font-weight: 700;
+p {
+    text-align: center;
 }
-/*
-*   Container
-*/
-.container, .canvasPre, .divSubirFoto{
-    margin-left: 1em;
-    margin-right: 1em;
-}
-/*
-*   Canvas and Pre.
-*/
-.canvasPre{
-    display: grid;
-    justify-content: center;
-}
-pre{
-    cursor: pointer;
-    filter: drop-shadow(0em 0em 4em rgba(0, 0, 0, 0.100));
-    background-color: white;
-    color: rgb(0, 0, 0);;
-}
-.buttonCopiar{
-    width: 5.5em;
-    height: 2.5em;
-    border: none;
-    border-radius: 0.5em;
-    background-color: black;
-    color: white;
-    font-family: Inter,'sans-serif';
-    font-weight: 800;
-    cursor: pointer;
-    filter: drop-shadow(0em 0em 4em rgba(0, 0, 0, 0.100));
-}
-/*
-*   Submit File, Github and Information for page.
-*/
-.contactAndInformation{
-    margin-bottom: 2em;
-    display: grid;
-    justify-content: center;
-}
-.subirFoto{
-    font-weight: 600;
-    font-family: Inter, 'sans-serif';
-}
-.divSpanInformation{
-    margin-top: 2em;
-}
-.spanInformation{
-    font-family: Inter,'sans-serif';
-    font-weight: 700;
-}
-.spanGithub{
-    text-align: left;
-    font-family: Inter,'sans-serif';
-    font-weight: 700;
-    text-decoration: none;
+a {
     color: pink;
+    text-decoration: none;text-align: left;
+}
+
+#uploadinput {
+    margin: 1rem 0rem .5rem 0rem;
+}
+
+.buttonsmodes{
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem 0rem .5rem 0rem;
+}
+.buttons > button, .buttons > span > button {
+    width: 3rem;
+}
+#modes > button {
+    width: 5rem;
+}
+
+.ascii {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+#canvas {
+    display: none;
+}
+#pre {
+    background-color: white;
+    color: black;
+    filter: drop-shadow(0em 0em 4em rgba(0, 0, 0, 0.100));
+    margin: 1rem;
+}
+
+@media (max-width: 720px){
+
+    .info {
+        display: grid;
+        justify-content: center;
+        margin: .5rem;
+    }
+    p,a {
+        text-align: left;
+    }
+
+    #uploadinput {
+        margin: 1rem .5rem .5rem .5rem;
+    }
+
+    .buttonsmodes {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ascii {
+        display: grid;
+        justify-content: center;
+        transform: scale(0.6);
+        margin-top: -6rem;
+    }
+    #canvas {
+        display: none;
+    }
+    #pre {
+        margin: 0;
+        /*background-color: orange;*/
+    }
 }

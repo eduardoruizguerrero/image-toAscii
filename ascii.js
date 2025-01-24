@@ -127,6 +127,8 @@ function updateAscii() {
     
     const asciiString = imageToAscii(imageData.data, imageWidth, imageHeight, sizeWidth, sizeHeight);
     document.getElementById("pre").textContent = asciiString;
+
+    updateButtonStates();
 }
 
 /*
@@ -192,6 +194,8 @@ clear.addEventListener("click", () => {
     canvas.width = 0;
     canvas.height = 0;
     pre.textContent = "";
+
+    updateButtonStates();
 });
 
 //  Copiar el texto de pre.
@@ -221,3 +225,14 @@ modetwo.addEventListener("click", () => {
     chars = "█▓▒░ ";
     if (imageData) updateAscii();
 });
+
+const ascii = document.getElementById("pre");
+function updateButtonStates() {
+    const avaiblecontent = ascii.textContent !== "";
+    clear.disabled = !avaiblecontent;
+    copy.disabled = !avaiblecontent;
+    modeone.disabled = !avaiblecontent;
+    modetwo.disabled = !avaiblecontent;
+}
+
+updateButtonStates();

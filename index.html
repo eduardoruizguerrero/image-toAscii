@@ -1,50 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--font-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <!--font-->
-  <!--icon-->
-  <link rel="icon" type="image/x-icon" href="kura_ico.ico">
-  <!--icon-->
-  <!--load css-->
-  <link rel="stylesheet" href="style.css">
-  <!--load css-->
-  <title>image-toAscii.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>image-to Ascii</title>
 </head>
 <body>
-  <header>
-    <span title="I recommend uploading images less than 500px wide">
-      <h1>image-toAscii.</h1>
-    </span>
-  </header>
-  <div class="container">
-    <!--button functon text copy-->
-    <!--<button class="buttonCopiar" onclick="copiarAscii();" hidden><span>Copiar</span></button>-->
-    <!--button functon text copy-->
-    <div class="canvasPre">
-      <canvas id="micanvas" style="display: none;"></canvas>
-      <pre id="mipre"></pre>
+    <div class="container">
+        <h1>image-to Ascii</h1>
+        <div class="info">
+            <p>To generate another Ascii image, press clear or select file.</p>
+            <a href="htts://www.github.com">github :3</a>
+        </div>
+        <div class="buttons">
+            <div class="inputfile">
+                <input type="file" name="" id="uploadinput" accept="image/*">
+            </div>
+            <div class="buttonsmodes">
+                <div class="buttons">
+                    <button id="clear">clear</button>
+                    <span title="if you don't paste the text with monospace typography, the text will look ugly.">
+                        <button id="copy">copy</button>
+                    </span>
+                </div>
+                <div id="modes">
+                    <button id="modeone">mode one</button>
+                    <button id="modetwo">mode two</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="divSubmitFile">
-      <img src="" alt="" height="300em" id="img">
+    <div class="ascii">
+        <canvas id="canvas"></canvas>
+        <pre id="pre"></pre>
     </div>
-    <div class="contactAndInformation">
-        <input type="file" name="subirfoto" id="subirFoto" class="subirFoto" accept="image/*">
-      <div class="divSpanInformation">
-        <span class="spanInformation">To generate another Ascii image, please press F5.</span>
-      </div>
-      <div>
-        <a class="spanGithub" href="https://www.github.com/eduardoruizguerrero" target="_blank"><span class="spanGithub">github :3</span></a>
-      </div>
-    </div>
-  </div>
-  <!--load script-->
-<script src="ascii.js"></script>
-  <!--load script-->
 </body>
+<script src="ascii.js"></script>
 </html>

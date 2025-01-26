@@ -52,6 +52,16 @@ a {
     width: 5rem;
 }
 
+.download{
+    display: flex;
+    justify-content: center;
+    margin: .5rem 0rem .5rem 0rem;
+}
+.download > button {
+    width: 100%;
+    margin: .5rem 0rem .5rem 0rem;
+}
+
 .ascii {
     display: grid;
     justify-content: center;
@@ -71,30 +81,34 @@ a {
 
     p {
         text-align: left;
-        margin: .5rem 1rem 0rem 1rem;
+        margin: .5rem 2rem 0rem 2rem;
     }
     a {
         justify-content: left;
-        margin: 0rem 1rem .5rem 1rem;
+        margin: 0rem 2rem .5rem 2rem;
     }
 
     #uploadinput {
-        margin: 1rem .5rem .5rem 1rem;
+        margin: 1rem .5rem .5rem 2rem;
     }
 
     .buttonsmodes {
         display: flex;
         gap: 1rem;
-        margin: .5rem 1rem 0rem 1rem;
+        margin: .5rem 2rem 0rem 2rem;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .download > button {
+        width: 100%;
+        margin: .5rem 2rem .5rem 2rem;
     }
 
     .ascii {
         display: grid;
         justify-content: center;
         transform: scale(0.6);
-        margin-top: -4rem;
     }
     #canvas {
         display: none;

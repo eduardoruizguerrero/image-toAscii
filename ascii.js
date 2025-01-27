@@ -233,7 +233,8 @@ download.addEventListener("click", () => {
     const pre = document.getElementById("pre");
     const style = getComputedStyle(pre);
     const lines = pre.textContent.split("\n");
-    const lineHeight = parseInt(style.lineHeight) || 15;
+    const screenWidth = window.innerWidth;
+    const lineHeight = parseInt(style.lineHeight) || (screenWidth <= 720 ? 22 : 15);
     const padding = 2;
     const fontSize = parseInt(style.fontSize)
     const fontFamily = style.fontFamily;
@@ -265,7 +266,7 @@ download.addEventListener("click", () => {
     link.download = `${nombre}-ascii.png`;
     link.href = canvas.toDataURL("image/png");
     link.click();
-})
+});
 
 //  Habilitar o deshabilitar los botones en función de si hay o no hay una imagen ascii creada.
 const ascii = document.getElementById("pre");

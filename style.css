@@ -65,7 +65,6 @@ a {
 .ascii {
     display: grid;
     justify-content: center;
-    align-items: center;
 }
 #canvas {
     display: none;
@@ -108,13 +107,17 @@ a {
     .ascii {
         display: grid;
         justify-content: center;
-        transform: scale(0.6);
+        margin: 2rem;
+        max-width: 100%;
     }
     #canvas {
         display: none;
     }
     #pre {
         margin: 0;
+    }
+    pre {
+        font-family: "Roboto Mono", monospace;
     }
 }
 

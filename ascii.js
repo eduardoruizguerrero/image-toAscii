@@ -242,7 +242,7 @@ download.addEventListener("click", () => {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
     const width = pre.offsetWidth + padding * 2;
-    const height = lines.length * lineHeight - 15;
+    const height = lines.length * lineHeight - (screenWidth <= 720 ? 25 : 15);
 
     canvas.width = width;
     canvas.height = height;

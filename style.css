@@ -39,27 +39,39 @@ a {
 #uploadinput {
     margin: 1rem 0rem .5rem 0rem;
 }
+input {
+    font-family: Inter, 'sans-serif';
+    font-weight: 600;
+}
 
 .buttonsmodes{
     display: flex;
-    justify-content: space-between;
+    gap: .5rem;
     margin: .5rem 0rem .5rem 0rem;
 }
-.buttons > button, .buttons > span > button {
-    width: 3rem;
+.buttons {
+    display: flex;
+    width: 30%;
+    gap: .5rem;
 }
-#modes > button {
-    width: 5rem;
+#clear, #spancopy, #copy {
+    width: 4rem;
+}
+.download {
+    width: 70%;
+}
+#download {
+    width: 100%;
 }
 
-.download{
+#modes {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 0.5rem;
     margin: .5rem 0rem .5rem 0rem;
 }
-.download > button {
-    width: 100%;
-    margin: .5rem 0rem .5rem 0rem;
+#modes > button {
+    width: 6rem;
 }
 
 .ascii {
@@ -73,11 +85,14 @@ a {
     background-color: white;
     color: black;
     filter: drop-shadow(0em 0em 4em rgba(0, 0, 0, 0.100));
-    margin: 1rem;
+    margin: 1rem 1rem 4rem 1rem;
 }
 
 @media (max-width: 720px){
 
+    .container {
+        justify-content: center;
+    }
     p {
         text-align: left;
         margin: .5rem 2rem 0rem 2rem;
@@ -86,9 +101,9 @@ a {
         justify-content: left;
         margin: 0rem 2rem .5rem 2rem;
     }
-
+    
     #uploadinput {
-        margin: 1rem .5rem .5rem 2rem;
+        margin: 1rem 2rem .5rem 2rem;
     }
 
     .buttonsmodes {
@@ -98,10 +113,15 @@ a {
         justify-content: space-between;
         align-items: center;
     }
+    .download {
+        width: 50%;
+    }
 
-    .download > button {
-        width: 100%;
+    #modes{
         margin: .5rem 2rem .5rem 2rem;
+    }
+    #modes > button {
+        width: 4rem;
     }
 
     .ascii {
@@ -114,7 +134,7 @@ a {
         display: none;
     }
     #pre {
-        margin: 0;
+        margin: 1rem 1rem 4rem 1rem;
     }
     pre {
         font-family: "Roboto Mono", monospace;

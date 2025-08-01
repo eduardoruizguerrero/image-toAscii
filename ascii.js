@@ -84,6 +84,7 @@ document.getElementById("uploadinput").addEventListener("change", function (e) {
         //  Crear un objeto de imagen con los datos obtenidos.
         const imagen = new Image();
         imagen.src = reader.result;
+        AsciiSizeRange.value = SizeRangeValues.max;
     
         //  Carga la imagen y realiza el escalado, para luego dibujar en el canvas.
         imagen.onload = () => {
@@ -117,14 +118,20 @@ document.getElementById("uploadinput").addEventListener("change", function (e) {
 
 //  Input Range para modificar el tamaño de la imagen ascii generada.
 let AsciiSizeRange = document.getElementById("AsciiSizeRange")
+const SizeRangeValues = {
+    max: 40,
+    min: 10,
+    step: 2
+}
+
 //  Actualiza la imagen ascii.
 function updateAscii() {
     if (!imageData) return; //  Si no existe algún dato de imagen, retornar.
     
     //  Variables para definir el ancho y alto de la imagen ascii.
-    AsciiSizeRange.max = "40";
-    AsciiSizeRange.min = "10";
-    AsciiSizeRange.step = "2";
+    AsciiSizeRange.max = SizeRangeValues.max;
+    AsciiSizeRange.min = SizeRangeValues.min;
+    AsciiSizeRange.step = SizeRangeValues.step;
 
     //  Renderizamos la imagen.
     const renderAscii = () => {
@@ -213,6 +220,7 @@ clear.addEventListener("click", () => {
     pre.textContent = "";
 
     updateButtonStates();
+    AsciiSizeRange.value = SizeRangeValues.max;
 });
 
 //  Copiar el texto ascii al portapapeles.

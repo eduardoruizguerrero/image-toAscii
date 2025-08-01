@@ -74,6 +74,54 @@ input {
     width: 6rem;
 }
 
+#AsciiSizeRange {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    height: .5rem;
+    border-radius: .5rem;
+    background: #ddd;
+    outline: none;
+    cursor: pointer;
+    margin: 1.5rem 0rem 1.5rem 0rem;
+    direction: rtl;
+}
+
+
+#AsciiSizeRange::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, pink var(--value, 0%), #ddd var(--value, 0%)); 
+    height: .5rem;
+    border-radius: .5rem;
+}
+#AsciiSizeRange::-moz-range-track {
+    background: #ddd;
+    height: .5rem;
+    border-radius: .5rem;
+}
+#AsciiSizeRange::-moz-range-progress {
+    background: pink;
+    height: .5rem;
+    border-radius: .5rem;
+}
+
+
+#AsciiSizeRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background: pink;
+    border-radius: 50%;
+    margin-top: -4px;
+}
+#AsciiSizeRange::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    background: pink;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .ascii {
     display: grid;
     justify-content: center;
@@ -90,6 +138,14 @@ input {
 
 @media (max-width: 720px){
 
+    html, body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    
     .container {
         justify-content: center;
     }
@@ -124,6 +180,10 @@ input {
         width: 4rem;
     }
 
+    #asciirange {
+        margin: 1.5rem 2rem 1.5rem 2rem;
+    }
+    
     .ascii {
         display: grid;
         justify-content: center;

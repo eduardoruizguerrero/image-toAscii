@@ -1,11 +1,22 @@
-# image-toAscii
-Convert your image to ASCII format.
-## Editing code!.
-To edit the characters shown on the screen you must modify the const **'chars'**.  
-To edit the number of characters shown on the screen, you must modify the const variables **'sizeWidth'** and **'sizeHeight'**, this number follows an _aspect ratio_, please **maintain it**, remember, the larger the numbers, the smaller the image will be end.
-The images are saved in temporary variable, you can change the image in real time without refresh page :D!.
-Now you can copy the ascii image, and clear the content, OR MODIFY THE CHARS IN REAL TIME :D!!!!!.
-Now you can DOWNLOAD A PICTURE LIKE ASCII IMAGE!!!!.
-To end, I improved the code, thanks for using the code to here or in vercel page.
+# image-toAscii  
+Convert your images into ASCII art quickly and with full customization.
 
-### Thanks for reading :D!.
+## Key Features  
+- **Instant conversion:** Upload any image and transform it into ASCII in seconds.  
+- **Real-time editing:** Change characters and image size without reloading the page or re-uploading the image.  
+- **Copy and download:** Copy the generated ASCII art or download it directly as an image.  
+- **Optimized and scalable code:**  
+  - The values SizeRange **`Min`**, **`Max`** and **`Step`** are now centralized in a single constant, improving code scalability and maintainability.  
+  - The **`chars`** constant follows the same methodology for easier modification and reuse.
+  - I improved the **`sizeHeight`** and **`sizeWidth`** algorithms so that they work dynamically.
+
+## Customization  
+- Edit **`chars`** to define which characters are used in the ASCII representation.  
+- Adjust **`sizeWidth`** and **`sizeHeight`** to control resolution. Keep the 1:2 (for example: sizeWidth value = 20, sizeHeight value = 40) aspect ratio for the best results.  
+
+## Improvements  
+- Optimized code structure for better performance.  
+- Dynamic editing without page refresh.  
+- Direct ASCII image download capability.  
+
+Thank you for using **image-toAscii**.

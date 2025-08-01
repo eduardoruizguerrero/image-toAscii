@@ -33,7 +33,14 @@ p {
 a {
     color: pink;
     text-decoration: none;
-    justify-content: left;
+}
+.infoPrecaution {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.infoPrecaution > p {
+    font-size: .5rem;
 }
 
 #uploadinput {
@@ -157,6 +164,12 @@ input {
         justify-content: left;
         margin: 0rem 2rem .5rem 2rem;
     }
+    .infoPrecaution {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+    }
     
     #uploadinput {
         margin: 1rem 2rem .5rem 2rem;
@@ -181,7 +194,7 @@ input {
     }
 
     #asciirange {
-        margin: 1.5rem 2rem 1.5rem 2rem;
+        margin: .5rem 2rem .5rem 2rem;
     }
     
     .ascii {
@@ -251,3 +264,4 @@ input {
 
 
 */
+

@@ -114,32 +114,33 @@ document.getElementById("uploadinput").addEventListener("change", function (e) {
     //  Lee el archivo como una url de datos
     reader.readAsDataURL(this.files[0]);
 });
-    
+
+//  Input Range para modificar el tamaño de la imagen ascii generada.
+let AsciiSizeRange = document.getElementById("AsciiSizeRange")
 //  Actualiza la imagen ascii.
 function updateAscii() {
     if (!imageData) return; //  Si no existe algún dato de imagen, retornar.
     
     //  Variables para definir el ancho y alto de la imagen ascii.
-    let sizeWidth, sizeHeight;
-    
-    //  Analiza las dimensiones de la imagen subida y cambiar los valores de las variables.
-    if (imageWidth >= 2000) {
-        sizeWidth = 20;
-        sizeHeight = 40;
-    } else if (imageWidth >= 700) {
-        sizeWidth = 10;
-        sizeHeight = 20;
-    } else {
-        sizeWidth = 5;
-        sizeHeight = 10;
+    AsciiSizeRange.max = "40";
+    AsciiSizeRange.min = "10";
+    AsciiSizeRange.step = "2";
+
+    //  Renderizamos la imagen.
+    const renderAscii = () => {
+        //  Ancho y alto dinámicos.
+        let sizeWidth = parseInt(AsciiSizeRange.value);
+        let sizeHeight = sizeWidth * 2;
+        //  Datos de la imagen.
+        const asciiString = imageToAscii(imageData.data, imageWidth, imageHeight, sizeWidth, sizeHeight);
+        //  Imprimir la imagen en el elemento 'pre' Html.
+        document.getElementById("pre").textContent = asciiString;
+
+        updateButtonStates();
     }
 
-    //  Con los datos obtenidos, generar la imagen
-    const asciiString = imageToAscii(imageData.data, imageWidth, imageHeight, sizeWidth, sizeHeight);
-    //  Imprimir la imagen en el elemento 'pre' Html.
-    document.getElementById("pre").textContent = asciiString;
-
-    updateButtonStates();   //  Actualiza el estado de los botones (deshabilitar o habilitar)
+    renderAscii();
+    AsciiSizeRange.addEventListener("input", renderAscii)  //  Cuando modifiquemos el valor del input range se modificará la imagen ascii generada.
 }
 
 /*
@@ -324,6 +325,7 @@ function updateButtonStates() {
     modethree.disabled = !avaiblecontent;
     modefour.disabled = !avaiblecontent;
     download.disabled = !avaiblecontent;
+    AsciiSizeRange.disabled = !avaiblecontent;
 }
 
 updateButtonStates();   //  Llamar a la función para actualizar el estado de los botones.

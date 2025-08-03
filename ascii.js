@@ -85,6 +85,7 @@ document.getElementById("uploadinput").addEventListener("change", function (e) {
         const imagen = new Image();
         imagen.src = reader.result;
         AsciiSizeRange.value = SizeRangeValues.max;
+        modeone.click();
     
         //  Carga la imagen y realiza el escalado, para luego dibujar en el canvas.
         imagen.onload = () => {
@@ -214,6 +215,7 @@ clear.addEventListener("click", () => {
     const pre = document.getElementById("pre");
     const canvas = document.getElementById("canvas");
     
+    modeone.click();
     uploadinput.value = "";
     canvas.width = 0;
     canvas.height = 0;
@@ -337,3 +339,4 @@ function updateButtonStates() {
 }
 
 updateButtonStates();   //  Llamar a la función para actualizar el estado de los botones.
+

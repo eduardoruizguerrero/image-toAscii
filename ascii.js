@@ -61,7 +61,8 @@
 //  Lista de cadenas ascii para cada modo.
 const modes = {
     one: "#@%*+=-:. ",
-    two: "@#%*+=-_. ",
+    two: "$@B%&WM#*okbdpqwmzcvunxrjft/\|(){}[]?-+~<>!;:,.",
+    //two: "@#%*+=-_. ",
     three: "█▓▒░ ",
     four: "⣿⡿⠿⠛⠁"
 }
